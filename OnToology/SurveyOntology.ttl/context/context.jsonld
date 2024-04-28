@@ -1,0 +1,375 @@
+{
+  "@context" : {
+    "Verified" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Verified"
+    },
+    "hasCommentText" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "TypeOfTraveller" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TypeOfTraveller"
+    },
+    "hasRating" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating",
+      "@type" : "@id"
+    },
+    "ReviewBody" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ReviewBody"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Country"
+    },
+    "isDatePublishedOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDatePublishedOf",
+      "@type" : "@id"
+    },
+    "hasSurveyRating" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSurveyRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Comment" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment"
+    },
+    "hasAircraft" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAircraft",
+      "@type" : "@id"
+    },
+    "Recommended" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Recommended"
+    },
+    "PassengerCountry" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PassengerCountry"
+    },
+    "hasOriginCity" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasOriginCity",
+      "@type" : "@id"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "hasTripVerified" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasTripVerified",
+      "@type" : "@id"
+    },
+    "hasWifiAndConnectivity" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasWifiAndConnectivity",
+      "@type" : "@id"
+    },
+    "hasGroundService" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasGroundService",
+      "@type" : "@id"
+    },
+    "isRecommended" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRecommended",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "DatePublished" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DatePublished"
+    },
+    "Title" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Title"
+    },
+    "hasComment" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasComment",
+      "@type" : "@id"
+    },
+    "hasAuthorNameContent" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAuthorNameContent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isDestinationCityOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDestinationCityOf",
+      "@type" : "@id"
+    },
+    "hasLevelRating" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasLevelRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasDestinationCity" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDestinationCity",
+      "@type" : "@id"
+    },
+    "hasCityName" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCityName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "OverallRating" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#OverallRating"
+    },
+    "Destination" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Destination"
+    },
+    "hasCommentTitle" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentTitle",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isRatingOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf",
+      "@type" : "@id"
+    },
+    "Airplane" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airplane"
+    },
+    "hasCommentBody" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentBody",
+      "@type" : "@id"
+    },
+    "hasDatePublished" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDatePublished",
+      "@type" : "@id"
+    },
+    "hasRecommended" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRecommended",
+      "@type" : "@id"
+    },
+    "Origin" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Origin"
+    },
+    "ValueForMoney" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ValueForMoney"
+    },
+    "DateFlown" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateFlown"
+    },
+    "InflightEntertainment" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#InflightEntertainment"
+    },
+    "isPassengerCountryOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isPassengerCountryOf",
+      "@type" : "@id"
+    },
+    "CabinStaffService" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CabinStaffService"
+    },
+    "hasOverallRating" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasOverallRating",
+      "@type" : "@id"
+    },
+    "hasCabinStaffService" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCabinStaffService",
+      "@type" : "@id"
+    },
+    "DateData" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateData"
+    },
+    "SurveyComment" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyComment"
+    },
+    "hasFoodAndBeverages" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasFoodAndBeverages",
+      "@type" : "@id"
+    },
+    "isCommentTitlleOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentTitlleOf",
+      "@type" : "@id"
+    },
+    "SurveyRating" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRating"
+    },
+    "isSeatTypeOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isSeatTypeOf",
+      "@type" : "@id"
+    },
+    "isFoodAndBeverageOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isFoodAndBeverageOf",
+      "@type" : "@id"
+    },
+    "isGroundServiceOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isGroundServiceOf",
+      "@type" : "@id"
+    },
+    "C" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#C",
+      "@type" : "@id"
+    },
+    "isCommentOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentOf",
+      "@type" : "@id"
+    },
+    "hasAuthor" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAuthor",
+      "@type" : "@id"
+    },
+    "Survey" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"
+    },
+    "B" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#B",
+      "@type" : "@id"
+    },
+    "isRecommendedOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRecommendedOf",
+      "@type" : "@id"
+    },
+    "isOriginCityOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isOriginCityOf",
+      "@type" : "@id"
+    },
+    "RyanairSurvey" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"
+    },
+    "SeatComfort" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatComfort"
+    },
+    "Rating" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating"
+    },
+    "isAirlineOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isAirlineOf",
+      "@type" : "@id"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Aircraft"
+    },
+    "hasSeatComfort" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSeatComfort",
+      "@type" : "@id"
+    },
+    "TripVerified" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TripVerified"
+    },
+    "hasCountryName" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCountryName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasSeatType" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSeatType",
+      "@type" : "@id"
+    },
+    "SurveyData" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"
+    },
+    "hasData" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData",
+      "@type" : "@id"
+    },
+    "Airline" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airline"
+    },
+    "WifiAndConnectivity" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#WifiAndConnectivity"
+    },
+    "isSeatComfortOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isSeatComfortOf",
+      "@type" : "@id"
+    },
+    "isDataOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf",
+      "@type" : "@id"
+    },
+    "isTripVerifiedOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isTripVerifiedOf",
+      "@type" : "@id"
+    },
+    "QatarAirwaysSurvey" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirwaysSurvey"
+    },
+    "Author" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author"
+    },
+    "isVerirified" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isVerirified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasInflightEntertainment" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasInflightEntertainment",
+      "@type" : "@id"
+    },
+    "A" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#A",
+      "@type" : "@id"
+    },
+    "isValueForMoneyOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isValueForMoneyOf",
+      "@type" : "@id"
+    },
+    "isCabinStaffServiceOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCabinStaffServiceOf",
+      "@type" : "@id"
+    },
+    "isWifiAndConnectivityOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isWifiAndConnectivityOf",
+      "@type" : "@id"
+    },
+    "isAuthorOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isAuthorOf",
+      "@type" : "@id"
+    },
+    "GroundService" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#GroundService"
+    },
+    "hasDateFlown" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDateFlown",
+      "@type" : "@id"
+    },
+    "hasAirline" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAirline",
+      "@type" : "@id"
+    },
+    "isDateFlownOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDateFlownOf",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "CommentTitle" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle"
+    },
+    "isCommentBodyOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentBodyOf",
+      "@type" : "@id"
+    },
+    "isTypeOfTravellerOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isTypeOfTravellerOf",
+      "@type" : "@id"
+    },
+    "isOverwallRatingOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isOverwallRatingOf",
+      "@type" : "@id"
+    },
+    "CityData" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CityData"
+    },
+    "hasTypeOfTraveller" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasTypeOfTraveller",
+      "@type" : "@id"
+    },
+    "hasValueForMoney" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasValueForMoney",
+      "@type" : "@id"
+    },
+    "SeatType" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatType"
+    },
+    "FoodAndBeverages" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FoodAndBeverages"
+    },
+    "IsAircraftOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#IsAircraftOf",
+      "@type" : "@id"
+    },
+    "isInflightEntertainmentOf" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isInflightEntertainmentOf",
+      "@type" : "@id"
+    },
+    "hasPassengerCountry" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasPassengerCountry",
+      "@type" : "@id"
+    },
+    "LevelRating" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"
+    },
+    "hasDataDate" : {
+      "@id" : "http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDataDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  }
+}
