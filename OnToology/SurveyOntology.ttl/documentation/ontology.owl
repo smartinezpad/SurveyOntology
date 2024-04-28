@@ -1,0 +1,2327 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#"
+     xml:base="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:FlightCustomerSatisfactionSurvey="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey">
+        <rdfs:comment>Ontology for customer surveys on commercial flights. This ontology models both the types of surveys (according to the questions associated with them) and their data, comments and types of response that they may have.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#A -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#A">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#B"/>
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#C"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#B -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#B"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#C -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#C"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#IsAircraftOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#IsAircraftOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAircraft"/>
+        <rdfs:comment>Property linking survey toaircraft</rdfs:comment>
+        <rdfs:label>isAircraftOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAircraft -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAircraft">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Aircraft"/>
+        <rdfs:comment>Property linking aircraft to survey</rdfs:comment>
+        <rdfs:comment>hasAircraft</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAirline -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAirline">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isAirlineOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airline"/>
+        <rdfs:comment>Property linking airline to survey</rdfs:comment>
+        <rdfs:label>hasAirline</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAuthor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAuthor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isAuthorOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirwaysSurvey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author"/>
+        <rdfs:comment>Property linking author to survey</rdfs:comment>
+        <rdfs:label>hasAuthor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCabinStaffService -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCabinStaffService">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCabinStaffServiceOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CabinStaffService"/>
+        <rdfs:comment>Property linking cabin staff level to survey</rdfs:comment>
+        <rdfs:label>hasCabinStaffService</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasComment -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasComment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentBody -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentBody">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasComment"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentBodyOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ReviewBody"/>
+        <rdfs:comment>Proporty linking comment body to survey</rdfs:comment>
+        <rdfs:label>hasCommentBody</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentTitle -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasComment"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentTitlleOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Title"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDateFlown -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDateFlown">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDateFlownOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateFlown"/>
+        <rdfs:comment>Property linking flight date flown to survey</rdfs:comment>
+        <rdfs:label>hasDateFlown</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDatePublished -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDatePublished">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDatePublishedOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DatePublished"/>
+        <rdfs:comment>Property linking date published to survey</rdfs:comment>
+        <rdfs:label>hasDatePublished</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDestinationCity -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDestinationCity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDestinationCityOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Destination"/>
+        <rdfs:comment>Property linking flight destination city to survey</rdfs:comment>
+        <rdfs:comment>hasDestinationCity</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasFoodAndBeverages -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasFoodAndBeverages">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isFoodAndBeverageOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FoodAndBeverages"/>
+        <rdfs:comment>Property linking food and beverages level to survey</rdfs:comment>
+        <rdfs:label>hasFoodAndBeverages</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasGroundService -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasGroundService">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isGroundServiceOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#GroundService"/>
+        <rdfs:comment>Property linking ground service level to survey</rdfs:comment>
+        <rdfs:label>hasGroundService</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasInflightEntertainment -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasInflightEntertainment">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isInflightEntertainmentOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#InflightEntertainment"/>
+        <rdfs:comment>Property linking inflight entertainment level to survey</rdfs:comment>
+        <rdfs:label>hasInflightEntertainment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasOriginCity -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasOriginCity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isOriginCityOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Origin"/>
+        <rdfs:comment>Property linking flight origin city to survey</rdfs:comment>
+        <rdfs:label>hasOriginCity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasOverallRating -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasOverallRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isOverwallRatingOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#OverallRating"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating"/>
+        <rdfs:comment>Property linking general rating punctuation to survey</rdfs:comment>
+        <rdfs:label>hasOverallRating</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasPassengerCountry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasPassengerCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isPassengerCountryOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PassengerCountry"/>
+        <rdfs:comment>Property linking passenger or customer city to survey</rdfs:comment>
+        <rdfs:label>hasPassengerCountry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRecommended -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRecommended">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRecommendedOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Recommended"/>
+        <rdfs:comment>Property linking customer recommend flight to survey</rdfs:comment>
+        <rdfs:label>hasRecommended</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSeatComfort -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSeatComfort">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isSeatComfortOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatComfort"/>
+        <rdfs:comment>Property linking seat comfort level to survey</rdfs:comment>
+        <rdfs:label>hasSeatComfort</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSeatType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSeatType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isSeatTypeOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatType"/>
+        <rdfs:comment>Property linking flight seat type to survey</rdfs:comment>
+        <rdfs:label>hasSeatType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasTripVerified -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasTripVerified">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isTripVerifiedOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TripVerified"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Verified"/>
+        <rdfs:comment>Property linking if trip is verified to survey</rdfs:comment>
+        <rdfs:label>hasTripVerified</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasTypeOfTraveller -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasTypeOfTraveller">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isTypeOfTravellerOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TypeOfTraveller"/>
+        <rdfs:comment>Property linking type of traveller to survey</rdfs:comment>
+        <rdfs:label>hasTypeOfTraveller</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasValueForMoney -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasValueForMoney">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isValueForMoneyOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ValueForMoney"/>
+        <rdfs:comment>Property linking value for money level to survey</rdfs:comment>
+        <rdfs:label>hasValueForMoney</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasWifiAndConnectivity -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasWifiAndConnectivity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRating"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isWifiAndConnectivityOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#WifiAndConnectivity"/>
+        <rdfs:comment>Property linking Wifi and Connectivity level to survey</rdfs:comment>
+        <rdfs:label>hasWifiAndConnectivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isAirlineOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isAirlineOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <rdfs:comment>Property linking survey to airline</rdfs:comment>
+        <rdfs:label>isAirlineOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isAuthorOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isAuthorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <rdfs:comment>Property linking survey to author</rdfs:comment>
+        <rdfs:label>isAuthorOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCabinStaffServiceOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCabinStaffServiceOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf"/>
+        <rdfs:comment>Property linking survey to cabin staff service level</rdfs:comment>
+        <rdfs:label>isCabinStaffServiceOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentBodyOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentBodyOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentOf"/>
+        <rdfs:comment>Property linking survey to  comment body</rdfs:comment>
+        <rdfs:label>isCommentBodyOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentTitlleOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentTitlleOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isCommentOf"/>
+        <rdfs:comment>Proporty linking survey to  comment title</rdfs:comment>
+        <rdfs:label>isCommentTitleOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDateFlownOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDateFlownOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <rdfs:comment>Property linking survey to flight date flown</rdfs:comment>
+        <rdfs:label>isDateFlownOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDatePublishedOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDatePublishedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <rdfs:comment>Property linking survey to date published</rdfs:comment>
+        <rdfs:label>isDatePublishedOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDestinationCityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDestinationCityOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <rdfs:comment>Property linking survey to flight destination city</rdfs:comment>
+        <rdfs:label>isDestinationCityOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isFoodAndBeverageOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isFoodAndBeverageOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf"/>
+        <rdfs:comment>Property linking survey to food and beverages level</rdfs:comment>
+        <rdfs:label>isFoodAndBeverageOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isGroundServiceOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isGroundServiceOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf"/>
+        <rdfs:comment>Property linking survey to ground service level</rdfs:comment>
+        <rdfs:label>isGroundServiceOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isInflightEntertainmentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isInflightEntertainmentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf"/>
+        <rdfs:comment>Property linking survey to inflight entertainment level</rdfs:comment>
+        <rdfs:label>isInflightEntertainmentOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isOriginCityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isOriginCityOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <rdfs:comment>Property linking survey to flight origin city</rdfs:comment>
+        <rdfs:label>isOriginCityOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isOverwallRatingOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isOverwallRatingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf"/>
+        <rdfs:comment>Property linking survey to overall rating</rdfs:comment>
+        <rdfs:label>isOverallRatingOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isPassengerCountryOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isPassengerCountryOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <rdfs:comment>Property linking survey to flight passenger or customer country</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRecommendedOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRecommendedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf"/>
+        <rdfs:comment>Property linking survey to recommended trip</rdfs:comment>
+        <rdfs:label>isRecommendedOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isSeatComfortOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isSeatComfortOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf"/>
+        <rdfs:comment>Property linking survey to seat comfort level</rdfs:comment>
+        <rdfs:comment>isSeatComfortOf</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isSeatTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isSeatTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <rdfs:comment>Property linking survey to flight seat type</rdfs:comment>
+        <rdfs:label>isSeatTypeOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isTripVerifiedOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isTripVerifiedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <rdfs:comment>Property linking survey to flight is verified</rdfs:comment>
+        <rdfs:label>isTripVerifiedOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isTypeOfTravellerOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isTypeOfTravellerOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isDataOf"/>
+        <rdfs:comment>Property linking survey to type of traveller</rdfs:comment>
+        <rdfs:label>isTypeOfTravellerOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isValueForMoneyOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isValueForMoneyOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf"/>
+        <rdfs:comment>Property linking survey to value for money level</rdfs:comment>
+        <rdfs:label>isValueForMoneyOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isWifiAndConnectivityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isWifiAndConnectivityOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRatingOf"/>
+        <rdfs:comment>Property linking survey to wifi and connectivity level</rdfs:comment>
+        <rdfs:label>isWifiAndConnectivityOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAuthorNameContent -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAuthorNameContent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Author name and surname</rdfs:comment>
+        <rdfs:label>hasAuthorNameContent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCityName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCityName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CityData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>City name of origin or destination. In case of destination it could include via city.</rdfs:comment>
+        <rdfs:label>hasCityNameContent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentText">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ReviewBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Comment text or review body</rdfs:comment>
+        <rdfs:label>hasCommentTextContent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCountryName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCountryName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Country"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PassengerCountry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Passenger or customer country name</rdfs:comment>
+        <rdfs:label>hasCountryNameContent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDataDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDataDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Data date for DataDate subclasess, like DatePublished or DateFlown</rdfs:comment>
+        <rdfs:label>hasDataDateContent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasLevelRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasLevelRating">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Rating level answer where values are from 0 to 5</rdfs:comment>
+        <rdfs:label>hasLevelRatingContent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSurveyRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSurveyRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#OverallRating"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Content of level rating questions</rdfs:comment>
+        <rdfs:label>hasSurveyRatingContent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRecommended -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isRecommended">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Recommended"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Express if flight is recommended by customer or traveller</rdfs:comment>
+        <rdfs:label>isRecommendedValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isVerirified -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#isVerirified">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TripVerified"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Verified"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Is a verified customer or traveller</rdfs:comment>
+        <rdfs:label>isVerifiedValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Aircraft -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Aircraft">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airplane"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Aircraft model used in the survey reference flight.</rdfs:comment>
+        <rdfs:label>Aircraft</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/Aircraft</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airline -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Airline that carry out the survey</rdfs:comment>
+        <rdfs:label>Airline</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/Airline</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airplane -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airplane">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Class used as example in exercise 1</rdfs:comment>
+        <rdfs:label>Airplane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Person or client who has filled in the survey</rdfs:comment>
+        <rdfs:label>Author</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CabinStaffService -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CabinStaffService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <rdfs:comment>Rating of cabin crew service.</rdfs:comment>
+        <rdfs:label>CabinStaffService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CityData -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CityData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>City data classes. Data classes where data is a city.</rdfs:comment>
+        <rdfs:label>CityData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ReviewBody"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyComment"/>
+        <rdfs:comment>Body of the text of the comment left by the customer (in this case the field name is set for Ryanair surveys).</rdfs:comment>
+        <rdfs:label>Comment</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/page/Comment</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Title"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyComment"/>
+        <rdfs:comment>Title of the comment provided by the customer (in this case the field name is set for Ryanair surveys)</rdfs:comment>
+        <rdfs:label>CommentTitle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Country -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Country">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PassengerCountry"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Country of origin of author or client (used for Qatar Airways surveys)</rdfs:comment>
+        <rdfs:label>Country</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/country</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateData -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Date data classes. Data classes where data is a date.</rdfs:comment>
+        <rdfs:label>DateData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateFlown -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateFlown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateData"/>
+        <rdfs:comment>Date of flight</rdfs:comment>
+        <rdfs:label>DateFlown</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DatePublished -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DatePublished">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateData"/>
+        <rdfs:comment>Survey publication date</rdfs:comment>
+        <rdfs:label>DatePublished</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Destination -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Destination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CityData"/>
+        <rdfs:comment>City of flight destination</rdfs:comment>
+        <rdfs:label>Destination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FoodAndBeverages -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FoodAndBeverages">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <rdfs:comment>Rating of food and beverages served during the flight.</rdfs:comment>
+        <rdfs:label>FoodAndBeverages</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#GroundService -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#GroundService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <rdfs:comment>Rating of ground service</rdfs:comment>
+        <rdfs:label>GroundService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#InflightEntertainment -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#InflightEntertainment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <rdfs:comment>Rating of inflight entertainment during the flight, like films, videogames, etc.</rdfs:comment>
+        <rdfs:label>InflightEntertainment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRating"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasLevelRating"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Level questions that can be rated from 0 to 5.</rdfs:comment>
+        <rdfs:label>LevelRating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Origin -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Origin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CityData"/>
+        <rdfs:comment>City of flight origin</rdfs:comment>
+        <rdfs:label>Origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#OverallRating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#OverallRating">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRating"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSurveyRating"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Overall flight rating question. Its values can be from 0 to 10 with 0 being very bad and 10 being very good (used by Ryanair surveys).</rdfs:comment>
+        <rdfs:label>OverallRating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PassengerCountry -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PassengerCountry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Country of origin of passenger (used for Ryanair surveys)</rdfs:comment>
+        <rdfs:label>PassengerCountry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirwaysSurvey -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirwaysSurvey">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentBody"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ReviewBody"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentTitle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Title"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasOverallRating"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasPassengerCountry"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Country"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasTripVerified"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Verified"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAirline"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirways"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Type of survey carried out by Qatar Airways</rdfs:comment>
+        <rdfs:label>QatarAirwaysSurvey</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRating"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSurveyRating"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Overall flight rating question. Its values can be from 0 to 10 with 0 being very bad and 10 being very good (used by QatarAirways surveys).</rdfs:comment>
+        <rdfs:label>Rating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Recommended -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Recommended">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRating"/>
+        <rdfs:comment>Yes or no question where the author or client expresses whether he/she recommends the flight or not.</rdfs:comment>
+        <rdfs:label>Recommended</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ReviewBody -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ReviewBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyComment"/>
+        <rdfs:comment>Body of the text of the comment left by the customer (in this case the field name is set for Qatar Airways surveys).</rdfs:comment>
+        <rdfs:label>ReviewBody</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCabinStaffService"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CabinStaffService"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentBody"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentTitle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasFoodAndBeverages"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FoodAndBeverages"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasGroundService"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#GroundService"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasInflightEntertainment"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#InflightEntertainment"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasOverallRating"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#OverallRating"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasPassengerCountry"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PassengerCountry"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSeatComfort"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatComfort"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasTripVerified"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TripVerified"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasValueForMoney"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ValueForMoney"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasWifiAndConnectivity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#WifiAndConnectivity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAirline"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Ryanair"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Type of survey carried out by Ryanair</rdfs:comment>
+        <rdfs:label>RyanairSurvey</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatComfort -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatComfort">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <rdfs:comment>Rating of aircraft comfort</rdfs:comment>
+        <rdfs:label>SeatComfort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#BusinessClass"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#EconomyClass"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FirstClass"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PremiumEconomy"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Passenger ticket seat type. This may be economy class, business class, first class or premium class.</rdfs:comment>
+        <rdfs:label>SeatType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAircraft"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Aircraft"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasAirline"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airline"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDateFlown"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateFlown"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDatePublished"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DatePublished"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasDestinationCity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Destination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasOriginCity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Origin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRecommended"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Recommended"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSeatType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasTypeOfTraveller"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TypeOfTraveller"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Ontology main class</rdfs:comment>
+        <rdfs:label>Survey</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/page/Survey</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyComment -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyComment">
+        <rdfs:comment>Comment survey data, including title and body</rdfs:comment>
+        <rdfs:label>SurveyComment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData">
+        <rdfs:comment>Basic survey data, with all necessary information identify flight and it conditions</rdfs:comment>
+        <rdfs:label>SurveyData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRating">
+        <rdfs:comment>Classes that can be used to evaluate the flight. Level, 0-10 and true/false answers are included.</rdfs:comment>
+        <rdfs:label>SurveyRating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Title -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Title">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyComment"/>
+        <rdfs:comment>Title of the review body provided by the customer (in this case the field name is set for Qatar Airways surveys)</rdfs:comment>
+        <rdfs:label>Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TripVerified -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TripVerified">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Verified"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Property indicating whether it has been verified that the passenger flew on the flight you are rating (used by Ryanair surveys).</rdfs:comment>
+        <rdfs:label>TripVerified</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TypeOfTraveller -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TypeOfTraveller">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Business"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CoupleLeisure"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FamilyLeisure"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SoloLeisure"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Passenger type, depending on the purpose of the journey and whether the passenger was accompanied. Possible values are solo leisure, couple leisure, business or family leisure.</rdfs:comment>
+        <rdfs:label>TypeOfTraveller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ValueForMoney -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#ValueForMoney">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <rdfs:comment>Rating of value for money</rdfs:comment>
+        <rdfs:label>ValueForMoney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Verified -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Verified">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyData"/>
+        <rdfs:comment>Property indicating whether it has been verified that the passenger flew on the flight you are rating (used by Qatar Airways surveys).</rdfs:comment>
+        <rdfs:label>Verified</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#WifiAndConnectivity -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#WifiAndConnectivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <rdfs:comment>Rating of the wifi and connectivity quality during the flight.</rdfs:comment>
+        <rdfs:label>WifiAndConnectivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#A380 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#A380">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Aircraft"/>
+        <rdfs:comment>Airbus model 380</rdfs:comment>
+        <rdfs:label>A380</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airbus380 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airbus380"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Alicante -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Alicante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Destination"/>
+        <hasCityName>Alicante</hasCityName>
+        <rdfs:comment>Destination Alicante</rdfs:comment>
+        <rdfs:label>Alicante</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author02 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author"/>
+        <hasAuthorNameContent>Miguel Hernández</hasAuthorNameContent>
+        <rdfs:comment>Second author</rdfs:comment>
+        <rdfs:label>Author02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Author"/>
+        <hasAuthorNameContent>Arturo Pérez Reverte</hasAuthorNameContent>
+        <rdfs:comment>First author</rdfs:comment>
+        <rdfs:label>Author01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Belfast -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Belfast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Origin"/>
+        <hasCityName>Belfast</hasCityName>
+        <rdfs:comment>Origin Belfast</rdfs:comment>
+        <rdfs:label>Belfast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Boeing777 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Boeing777"/>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Boeing_777 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Boeing_777">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Aircraft"/>
+        <rdfs:comment>Boeing model 777</rdfs:comment>
+        <rdfs:label>Boeing777</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Bristol -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Bristol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Origin"/>
+        <hasCityName>Bristol</hasCityName>
+        <rdfs:comment>Origin Bristol</rdfs:comment>
+        <rdfs:label>Bristol</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Business -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Business">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TypeOfTraveller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#BusinessClass -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#BusinessClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatType"/>
+        <rdfs:comment>Business class seat</rdfs:comment>
+        <rdfs:label>BusinessClass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment01 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment"/>
+        <hasCommentText>Comentario 1 para Ryanair</hasCommentText>
+        <rdfs:comment>First Ryanair comment</rdfs:comment>
+        <rdfs:label>RyanairComment01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CoupleLeisure -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CoupleLeisure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TypeOfTraveller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Dubai -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Dubai">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Destination"/>
+        <hasCityName>Dubai</hasCityName>
+        <rdfs:comment>Destination Dubai</rdfs:comment>
+        <rdfs:label>Dubai</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#EconomyClass -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#EconomyClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatType"/>
+        <rdfs:comment>Economy class seat</rdfs:comment>
+        <rdfs:label>EconomyClass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Eight -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Eight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating"/>
+        <hasSurveyRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</hasSurveyRating>
+        <rdfs:comment>Survey rating for 8</rdfs:comment>
+        <rdfs:label>SurveyRatingEight</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FamilyLeisure -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FamilyLeisure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TypeOfTraveller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FirstClass -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FirstClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatType"/>
+        <rdfs:comment>First class seat</rdfs:comment>
+        <rdfs:label>FirstClass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FirstMay -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FirstMay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateFlown"/>
+        <hasDataDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-01T07:00:00</hasDataDate>
+        <rdfs:comment>May 1st</rdfs:comment>
+        <rdfs:label>FirstMay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FistJune -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FistJune">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DateFlown"/>
+        <hasDataDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-01T07:00:00</hasDataDate>
+        <rdfs:comment>June first</rdfs:comment>
+        <rdfs:label>FirstJune</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRatingFour -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRatingFour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <hasLevelRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</hasLevelRating>
+        <rdfs:comment>Level rating rated by four</rdfs:comment>
+        <rdfs:label>LevelRatingFour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRatingOne -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRatingOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <hasLevelRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</hasLevelRating>
+        <rdfs:comment>Level rating rated by one</rdfs:comment>
+        <rdfs:label>LevelRatingOne</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRatingTwo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRatingTwo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRating"/>
+        <hasLevelRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</hasLevelRating>
+        <rdfs:comment>Level rating rated by two</rdfs:comment>
+        <rdfs:label>LevelRatingTwo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PremiumEconomy -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PremiumEconomy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SeatType"/>
+        <rdfs:comment>Premium economy seat</rdfs:comment>
+        <rdfs:label>PremiumEconomy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Qa -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Qa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirwaysSurvey"/>
+        <rdfs:comment>Third survey for Qatar Airways</rdfs:comment>
+        <rdfs:label>QatarAirwaysSurvey03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Qatar -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Qatar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment"/>
+        <hasCommentText>Segundo comentario para Qatar Airways</hasCommentText>
+        <rdfs:comment>Second commento for Qatar Airways</rdfs:comment>
+        <rdfs:label>QatarAirwaysComment02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirways -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirways">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirways01 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirways01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirwaysSurvey"/>
+        <hasAircraft rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Boeing_777"/>
+        <hasCommentBody rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarComment01"/>
+        <hasCommentTitle rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarComment01"/>
+        <hasDateFlown rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#FirstMay"/>
+        <hasDatePublished rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SecondMay"/>
+        <hasDestinationCity rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Alicante"/>
+        <hasOriginCity rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Belfast"/>
+        <hasOverallRating rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Seven"/>
+        <hasPassengerCountry rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#United_Kingdom"/>
+        <hasSeatType rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#EconomyClass"/>
+        <hasTripVerified rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#VerifiedYes"/>
+        <hasTypeOfTraveller rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SoloLeisure"/>
+        <rdfs:comment>First survey for Qatar Airways</rdfs:comment>
+        <rdfs:label>QatarAirwaysSurvey01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirways02 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirways02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirwaysSurvey"/>
+        <rdfs:comment>Second survey for Qatar Airways</rdfs:comment>
+        <rdfs:label>QatarAirwaysSurvey02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirwaysComment02 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarAirwaysComment02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment"/>
+        <hasCommentText>Tercer comentario para Qatar Airways</hasCommentText>
+        <rdfs:comment>Second comment for QatarAirways</rdfs:comment>
+        <rdfs:label>QatarAirwaysComment03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarComment01 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#QatarComment01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment"/>
+        <hasCommentText>Primer comentario para Qatar Airways</hasCommentText>
+        <rdfs:comment>First comment for QatarAirways</rdfs:comment>
+        <rdfs:label>QatarAirwaysComment01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RecommendedNo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RecommendedNo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Recommended"/>
+        <rdfs:comment>Flight no recommended</rdfs:comment>
+        <rdfs:label>RecommendedNo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RecommendedYes -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RecommendedYes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Recommended"/>
+        <isRecommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isRecommended>
+        <rdfs:comment>Flight is recommended</rdfs:comment>
+        <rdfs:comment>RecommendedYes</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Ry -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Ry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment"/>
+        <hasCommentText>Segundo comentario para Ryanair</hasCommentText>
+        <rdfs:comment>Second comment for Ryanair</rdfs:comment>
+        <rdfs:label>RyanairComment02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Ryan -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Ryan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"/>
+        <rdfs:comment>Second Ryanair survey</rdfs:comment>
+        <rdfs:label>RyanairSurvey02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Ryanair -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Ryanair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Airline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairComment03 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairComment03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Comment"/>
+        <hasCommentText>Tercer comentario para Ryanair</hasCommentText>
+        <rdfs:comment>Third comment for Ryanair</rdfs:comment>
+        <rdfs:label>RyanairComment03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairCommentTitle01 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairCommentTitle01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle"/>
+        <hasCommentTitle>TitleRA2</hasCommentTitle>
+        <rdfs:comment>Second comment title for Ryanair</rdfs:comment>
+        <rdfs:label>RyanairCommentTitle02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairCommentTitle02 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairCommentTitle02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle"/>
+        <hasCommentTitle>TitleRA1</hasCommentTitle>
+        <rdfs:comment>First comment title for Ryanair</rdfs:comment>
+        <rdfs:label>RyanairCommentTitle01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey01 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"/>
+        <rdfs:comment>First Ryanair survey</rdfs:comment>
+        <rdfs:label>RyanairSurvey01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SecondJune -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SecondJune">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DatePublished"/>
+        <hasDataDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-02T07:00:00</hasDataDate>
+        <rdfs:comment>June second</rdfs:comment>
+        <rdfs:label>SecondJune</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SecondMay -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SecondMay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#DatePublished"/>
+        <hasDataDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-02T07:00:00</hasDataDate>
+        <rdfs:comment>May second</rdfs:comment>
+        <rdfs:label>SecondMay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Seven -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Seven">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating"/>
+        <hasSurveyRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</hasSurveyRating>
+        <rdfs:comment>Survey rating for seven</rdfs:comment>
+        <rdfs:label>SurveyRatingSeven</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SoloLeisure -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SoloLeisure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#TypeOfTraveller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Spain -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Spain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PassengerCountry"/>
+        <hasCountryName>Spain</hasCountryName>
+        <rdfs:comment>Spain country</rdfs:comment>
+        <rdfs:label>Spain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRatingNine -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRatingNine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:comment>Survey rating for 9</rdfs:comment>
+        <rdfs:label>SurveyRatingNine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRatingforSix -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#SurveyRatingforSix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Rating"/>
+        <hasSurveyRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</hasSurveyRating>
+        <rdfs:comment>Survey rating for 6</rdfs:comment>
+        <rdfs:label>SurveyRatingSix</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#United_Kingdom -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#United_Kingdom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#PassengerCountry"/>
+        <hasCountryName>United Kingdom</hasCountryName>
+        <rdfs:comment>United Kingdom country</rdfs:comment>
+        <rdfs:label>UnitedKingdom</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#VerifiedNo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#VerifiedNo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Verified"/>
+        <isVerirified rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isVerirified>
+        <rdfs:comment>Customer of passenger no virified for flight</rdfs:comment>
+        <rdfs:label>VerifiedNo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#VerifiedYes -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#VerifiedYes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Verified"/>
+        <isVerirified rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isVerirified>
+        <rdfs:comment>Customer of passenger virified for flight</rdfs:comment>
+        <rdfs:label>VerifiedYes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#a -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#a">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle"/>
+        <hasCommentTitle>Title QA1</hasCommentTitle>
+        <rdfs:comment>First comment title for Qatar Airways</rdfs:comment>
+        <rdfs:label>QatarAirwaysCommentTitle01</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#b -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle"/>
+        <hasCommentTitle>Title QA2</hasCommentTitle>
+        <rdfs:comment>Second comment title for Qatar Airways</rdfs:comment>
+        <rdfs:label>QatarAirwaysCommentTitle02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#c -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#c">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle"/>
+        <hasCommentTitle>Title QA3</hasCommentTitle>
+        <rdfs:comment>Third comment title for Qatar Airways</rdfs:comment>
+        <rdfs:label>QatarAirwaysCommentTitle03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#d -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#d">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#CommentTitle"/>
+        <hasCommentTitle>TitleRA3</hasCommentTitle>
+        <rdfs:comment>Third comment title for Ryanair</rdfs:comment>
+        <rdfs:label>RyanairCommentTitle03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#r -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#r">
+        <rdf:type rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RyanairSurvey"/>
+        <rdfs:comment>Third Ryanair survey</rdfs:comment>
+        <rdfs:label>RyanairSurvey03</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasCommentTitle">
+        <rdfs:comment>Proporty linking comment title to survey</rdfs:comment>
+        <rdfs:label>hasCommentTitle</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/ovr">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/ovf">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Eight"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to determinate type of travel</rdfs:comment>
+        <rdfs:label>BusinessRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasSeatType"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/s"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#BusinessClass"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasTypeOfTraveller"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Business"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to determinte value for money level answer</rdfs:comment>
+        <rdfs:label>ValueForMoneyRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasWifiAndConnectivity"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/v"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRatingFour"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasInflightEntertainment"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/v"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRatingFour"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasValueForMoney"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#LevelRatingFour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Recommend rule by overall rating</rdfs:comment>
+        <rdfs:label>RecommendedRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Survey"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasOverallRating"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/s"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/ovr"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/ovf"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#Eight"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#hasRecommended"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey/s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/suco/ontologies/2024/FlightCustomerSatisfactionSurvey#RecommendedYes"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
