@@ -1,0 +1,34 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "FlightCustomerSatisfactionSurvey:ValueForMoney" "FlightCustomerSatisfactionSurvey:Destination" "FlightCustomerSatisfactionSurvey:FoodAndBeverages" "FlightCustomerSatisfactionSurvey:LevelRating" "FlightCustomerSatisfactionSurvey:DateFlown" "FlightCustomerSatisfactionSurvey:GroundService" "FlightCustomerSatisfactionSurvey:TripVerified" "FlightCustomerSatisfactionSurvey:Aircraft" "FlightCustomerSatisfactionSurvey:CommentTitle" "FlightCustomerSatisfactionSurvey:DateData" "FlightCustomerSatisfactionSurvey:Recommended" "FlightCustomerSatisfactionSurvey:CabinStaffService" "FlightCustomerSatisfactionSurvey:SurveyData" "FlightCustomerSatisfactionSurvey:SeatComfort" "FlightCustomerSatisfactionSurvey:TypeOfTraveller" "FlightCustomerSatisfactionSurvey:Airline" "FlightCustomerSatisfactionSurvey:Airplane" "FlightCustomerSatisfactionSurvey:Comment" "FlightCustomerSatisfactionSurvey:DatePublished" "FlightCustomerSatisfactionSurvey:SeatType" "FlightCustomerSatisfactionSurvey:InflightEntertainment" "FlightCustomerSatisfactionSurvey:ReviewBody" "FlightCustomerSatisfactionSurvey:SurveyComment" "FlightCustomerSatisfactionSurvey:Origin" "FlightCustomerSatisfactionSurvey:WifiAndConnectivity" "FlightCustomerSatisfactionSurvey:Author" "FlightCustomerSatisfactionSurvey:Verified" "FlightCustomerSatisfactionSurvey:CityData" "FlightCustomerSatisfactionSurvey:Country" "FlightCustomerSatisfactionSurvey:PassengerCountry" "FlightCustomerSatisfactionSurvey:Title" "FlightCustomerSatisfactionSurvey:SurveyRating" ; /*classes style*/
+	"FlightCustomerSatisfactionSurvey:DateData" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:TripVerified" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:CityData" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Comment" -> "FlightCustomerSatisfactionSurvey:SurveyComment" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:TypeOfTraveller" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:FoodAndBeverages" -> "FlightCustomerSatisfactionSurvey:LevelRating" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:ValueForMoney" -> "FlightCustomerSatisfactionSurvey:LevelRating" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Recommended" -> "FlightCustomerSatisfactionSurvey:SurveyRating" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:InflightEntertainment" -> "FlightCustomerSatisfactionSurvey:LevelRating" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:GroundService" -> "FlightCustomerSatisfactionSurvey:LevelRating" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:DatePublished" -> "FlightCustomerSatisfactionSurvey:DateData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:CabinStaffService" -> "FlightCustomerSatisfactionSurvey:LevelRating" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Aircraft" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Country" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:SeatType" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Airline" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Airplane" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Author" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Origin" -> "FlightCustomerSatisfactionSurvey:CityData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:WifiAndConnectivity" -> "FlightCustomerSatisfactionSurvey:LevelRating" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:PassengerCountry" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Title" -> "FlightCustomerSatisfactionSurvey:SurveyComment" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:DateFlown" -> "FlightCustomerSatisfactionSurvey:DateData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:ReviewBody" -> "FlightCustomerSatisfactionSurvey:SurveyComment" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Destination" -> "FlightCustomerSatisfactionSurvey:CityData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:Verified" -> "FlightCustomerSatisfactionSurvey:SurveyData" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:SeatComfort" -> "FlightCustomerSatisfactionSurvey:LevelRating" [ label = "rdfs:subClassOf" ];
+	"FlightCustomerSatisfactionSurvey:CommentTitle" -> "FlightCustomerSatisfactionSurvey:SurveyComment" [ label = "rdfs:subClassOf" ];
+
+}
